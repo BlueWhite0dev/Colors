@@ -1,0 +1,79 @@
+@use "base";
+@use "helpers";
+body {
+  @include helpers.body_bg;
+  width: 100svw;
+  height: 100svh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.card {
+  position: absolute;
+  box-shadow: 15px 10px #00000036;
+  width: 400px;
+  height: 600px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+}
+.header {
+  width: 100%;
+  height: 10%;
+  display: flex;
+  align-items: center;
+  .dot {
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    margin-left: 20px;
+    @include helpers.body_bg;
+  }
+}
+.main {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  .table {
+    margin-left: 20px;
+    width: 80%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+  .name {
+    width: 20%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      display: inline-block;
+      font-size: 50px;
+      transform: rotate(-90deg);
+      text-wrap: nowrap;
+    }
+  }
+}
+.bottom {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  button {
+    height: 100%;
+    aspect-ratio: 1/1;
+    background-color: #00000000;
+    border: none;
+    &:hover {
+      cursor: pointer;
+      transform: rotate(15deg);
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

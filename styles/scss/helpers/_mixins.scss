@@ -1,0 +1,36 @@
+@mixin grid_p($row, $column, $color_btn: #ffffff00) {
+  grid-row: $row;
+  grid-column: $column;
+  button {
+    background-image: $color_btn;
+  }
+}
+@mixin body_bg {
+  $color: #7272724d;
+  background-color: #191a1a;
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      $color 25%,
+      $color 26%,
+      transparent 27%,
+      transparent 74%,
+      $color 75%,
+      $color 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      $color 25%,
+      $color 26%,
+      transparent 27%,
+      transparent 74%,
+      $color 75%,
+      $color 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 55px 55px;
+}

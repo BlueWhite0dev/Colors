@@ -1,0 +1,88 @@
+@use "base";
+@use "helpers";
+//5x5
+body {
+  @include helpers.body_bg;
+  width: 100svw;
+  height: 100svh;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  gap: 10px;
+  grid-template-rows: repeat(5, 1fr);
+  grid-template-columns: repeat(5, 1fr);
+  button {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    border: none;
+    overflow: hidden;
+    &:hover:not(.name) {
+      cursor: pointer;
+    }
+  }
+  a {
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+span {
+  font-family: Jakarta;
+  font-size: 50px;
+  color: #0f0f0f;
+}
+.name {
+  @include helpers.grid_p(#{"4"}, #{"2/5"});
+  background-image: linear-gradient(135deg, #abdcff 10%, #0396ff 100%);
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  span {
+    animation: marquee 20s linear infinite;
+    font-size: 400px;
+    white-space: nowrap;
+    font-family: Jakarta;
+  }
+}
+.random {
+  @include helpers.grid_p(#{"5"}, #{"1/3"}, linear-gradient(45deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%));
+}
+.gradient {
+  @include helpers.grid_p(#{"5"}, #{"3/6"}, linear-gradient(to top, #a18cd1 0%, #fbc2eb 100%));
+}
+.pallete {
+  @include helpers.grid_p(#{"1/5"}, #{"5"}, linear-gradient(to top, #fbc2eb 0%, #a6c1ee 100%));
+  span {
+    display: inline-block;
+    font-size: 100px;
+    transform: rotate(90deg);
+  }
+}
+.text_g {
+  @include helpers.grid_p(#{"3"}, #{"1/2"}, linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%));
+  span {
+    font-size: 40px;
+  }
+}
+.contrast {
+  @include helpers.grid_p(#{"3"}, #{"2/5"}, linear-gradient(to right, #4facfe 0%, #00f2fe 100%));
+}
+.github {
+  @include helpers.grid_p(#{"4"}, #{"1"});
+}
+.buycoffee {
+  @include helpers.grid_p(#{"2"}, #{"1/3"});
+  background-color: #fff;
+  width: 50%;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  img {
+    width: 90%;
+  }
+}
