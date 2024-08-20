@@ -127,11 +127,11 @@ function checkAccessibility(CR) {
       case 1: {
         parseFloat(CR.slice(0, -2)) >= 4.5
           ? (function () {
-              document.querySelectorAll("img")[i - 1].src = "../img/success.svg";
+              document.querySelectorAll("img")[i - 1].src = "./img/success.svg";
               accesibility[i].style.background = color[0];
             })()
           : (function () {
-              document.querySelectorAll("img")[i - 1].src = "../img/alarm.svg";
+              document.querySelectorAll("img")[i - 1].src = "./img/alarm.svg";
               accesibility[i].style.background = color[1];
             })();
         break;
@@ -139,11 +139,11 @@ function checkAccessibility(CR) {
       case 2: {
         parseFloat(CR.slice(0, -2)) >= 3
           ? (function () {
-              document.querySelectorAll("img")[i - 1].src = "../img/success.svg";
+              document.querySelectorAll("img")[i - 1].src = "./img/success.svg";
               accesibility[i].style.background = color[0];
             })()
           : (function () {
-              document.querySelectorAll("img")[i - 1].src = "../img/alarm.svg";
+              document.querySelectorAll("img")[i - 1].src = "./img/alarm.svg";
               accesibility[i].style.background = color[1];
             })();
         break;
@@ -151,11 +151,11 @@ function checkAccessibility(CR) {
       case 3: {
         parseFloat(CR.slice(0, -2)) >= 7
           ? (function () {
-              document.querySelectorAll("img")[i - 1].src = "../img/success.svg";
+              document.querySelectorAll("img")[i - 1].src = "./img/success.svg";
               accesibility[i].style.background = color[0];
             })()
           : (function () {
-              document.querySelectorAll("img")[i - 1].src = "../img/alarm.svg";
+              document.querySelectorAll("img")[i - 1].src = "./img/alarm.svg";
               accesibility[i].style.background = color[1];
             })();
         break;
@@ -163,11 +163,11 @@ function checkAccessibility(CR) {
       case 4: {
         parseFloat(CR.slice(0, -2)) >= 4.5
           ? (function () {
-              document.querySelectorAll("img")[i - 1].src = "../img/success.svg";
+              document.querySelectorAll("img")[i - 1].src = "./img/success.svg";
               accesibility[i].style.background = color[0];
             })()
           : (function () {
-              document.querySelectorAll("img")[i - 1].src = "../img/alarm.svg";
+              document.querySelectorAll("img")[i - 1].src = "./img/alarm.svg";
               accesibility[i].style.background = color[1];
             })();
         break;
