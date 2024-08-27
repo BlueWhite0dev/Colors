@@ -1,0 +1,187 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Jakarta;
+  color: #0f0f0f;
+}
+
+body {
+  width: 100svw;
+  height: 100svh;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
+@keyframes move {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@font-face {
+  font-family: "Jakarta";
+  src: url("../../fonts/PlusJakartaSans-Bold.ttf");
+}
+* {
+  color: #fafafa;
+}
+
+body {
+  background-color: #191a1a;
+  background-image: linear-gradient(0deg, transparent 24%, rgba(114, 114, 114, 0.3019607843) 25%, rgba(114, 114, 114, 0.3019607843) 26%, transparent 27%, transparent 74%, rgba(114, 114, 114, 0.3019607843) 75%, rgba(114, 114, 114, 0.3019607843) 76%, transparent 77%, transparent), linear-gradient(90deg, transparent 24%, rgba(114, 114, 114, 0.3019607843) 25%, rgba(114, 114, 114, 0.3019607843) 26%, transparent 27%, transparent 74%, rgba(114, 114, 114, 0.3019607843) 75%, rgba(114, 114, 114, 0.3019607843) 76%, transparent 77%, transparent);
+  background-size: 55px 55px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.25em;
+}
+
+form {
+  background-color: #25242a;
+  height: 27.5rem;
+  aspect-ratio: 1/1;
+  border-radius: 1.563rem;
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  grid-template-rows: repeat(3, 33.3333333333%);
+  grid-template-columns: repeat(2, 50%);
+  padding: 1.25em;
+}
+form label {
+  width: calc(100% - 0.625rem);
+  height: calc(100% - 0.625rem);
+  display: flex;
+  justify-content: center;
+  gap: 0.625em;
+  flex-direction: column;
+}
+form label span {
+  font-size: 1.25em;
+}
+
+.container {
+  width: calc(100% - 2.501rem);
+  height: 45%;
+  display: flex;
+  align-items: center;
+  gap: 0.625em;
+  border-radius: 0.625rem;
+  padding-inline: 0.938em;
+  border: rgba(238, 242, 255, 0.5019607843) solid 0.063rem;
+  transition: border 150ms ease-in-out;
+}
+.container:hover {
+  border: #6366f1 solid 0.063rem;
+}
+.container input[type=color] {
+  border: none;
+  background-color: rgba(255, 255, 255, 0);
+  width: 3.125rem;
+  height: 2.5rem;
+}
+.container input[type=text] {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  outline: none;
+  font-size: clamp(1.125rem, 1.0431rem + 0.3807vw, 1.5rem);
+}
+
+input[type=number] {
+  width: calc(100% - 0.938em);
+  height: 45%;
+  padding-left: 0.938em;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0.625rem;
+  border: #43515c solid 0.063rem;
+  transition: border 300ms ease-in-out;
+  font-size: clamp(1.125rem, 1.0431rem + 0.3807vw, 1.5rem);
+}
+input[type=number]:hover {
+  border: #6366f1 solid 0.063rem;
+}
+
+select {
+  width: calc(100% - 0.938rem);
+  height: 45%;
+  padding-left: 0.938em;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 0.625rem;
+  border: #43515c solid 0.063rem;
+  transition: border 300ms ease-in-out;
+  font-size: clamp(1.125rem, 1.0431rem + 0.3807vw, 1.5rem);
+}
+select:hover {
+  border: #6366f1 solid 0.063rem;
+}
+
+button {
+  width: calc(100% - 1.25rem);
+  height: 50%;
+  border-radius: 0.625rem;
+  border: none;
+  font-size: clamp(1.125rem, 1.0431rem + 0.3807vw, 1.5rem);
+}
+button {
+  cursor: pointer;
+}
+
+.generate {
+  border: #43515c solid 0.031rem;
+  background-color: #25242a;
+  transition: border 300ms ease-in-out;
+}
+.generate:hover {
+  border: #fafafa solid 0.031rem;
+}
+
+.copy {
+  background-color: #7678ee;
+  transition: background-color 300ms ease-in-out;
+}
+.copy:hover {
+  background-color: #6366f1;
+}
+
+.gradient {
+  width: 30rem;
+  aspect-ratio: 1/1;
+  border-radius: 1.563rem;
+}
+
+@media (width <= 61.25rem) {
+  body {
+    flex-direction: column;
+    gap: 0.625em;
+  }
+  form {
+    width: calc(100% - 2.5rem);
+    height: calc(50% - 0.313rem);
+  }
+  .gradient {
+    width: 100%;
+    height: calc(50% - 0.313rem);
+  }
+  .container {
+    padding-inline: 0;
+    padding-left: 0.313em;
+    gap: 0.313em;
+    width: calc(100% - 0.625rem);
+  }
+  label {
+    align-items: center;
+  }
+}/*# sourceMappingURL=gradient.css.map */

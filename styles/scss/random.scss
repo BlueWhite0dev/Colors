@@ -2,22 +2,18 @@
 @use "helpers";
 body {
   @include helpers.body_bg;
-  width: 100svw;
-  height: 100svh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
 }
-span {
-  font-family: Jakarta;
-}
+
 .card {
   position: absolute;
-  box-shadow: 15px 10px #00000036;
-  width: 400px;
-  height: 600px;
-  border-radius: 30px 30px 25px 25px;
+  box-shadow: 0.938rem 0.625rem #00000036;
+  width: 25rem;
+  height: 37.5rem;
+  border-radius: 1.875rem 1.875rem 1.563rem 1.563rem;
   display: flex;
   flex-direction: column;
   background: linear-gradient(225deg, #edecea, #dadada);
@@ -25,17 +21,17 @@ span {
 }
 .header {
   width: 100%;
-  border-radius: 25px 25px 0 0;
+  border-radius: 1.563rem 1.563rem 0 0;
   padding-bottom: 50%;
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
   .dot {
     @include helpers.body_bg;
     position: relative;
-    width: 25px;
-    height: 25px;
+    width: 1.563rem;
+    height: 1.563rem;
     border-radius: 50%;
-    left: 20px;
-    top: 20px;
+    left: 1.25rem;
+    top: 1.25rem;
   }
 }
 .main {
@@ -47,22 +43,25 @@ span {
   justify-content: space-around;
   button:not(.name) {
     span {
-      font-size: 16px;
+      font-size: 1em;
     }
   }
   .name {
     display: flex;
     span {
-      font-size: 40px;
+      font-size: 2.5em;
       text-align: start;
     }
   }
   button {
-    margin-left: 10px;
+    margin-left: 0.625em;
     background-color: #00000000;
     border: none;
+    position: relative;
+    left: 0rem;
+    transition: left 200ms ease-in-out;
     &:hover {
-      background-color: #0000003a;
+      left: 0.625rem;
       cursor: pointer;
     }
   }
@@ -81,6 +80,7 @@ span {
     svg {
       width: 100%;
       height: 100%;
+      transition: transform 100ms ease-in-out;
       &:hover {
         cursor: pointer;
         transform: rotate(15deg);
@@ -91,14 +91,8 @@ span {
 .animation {
   animation: move 2s linear forwards;
 }
-@keyframes move {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(200%);
-  }
-  100% {
-    transform: translateY(0);
+@media (width <= 25rem) {
+  .card {
+    width: 100%;
   }
 }

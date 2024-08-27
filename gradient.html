@@ -7,20 +7,20 @@
     <title>Colors</title>
     <meta name="description" content="This is... Colors! What can I say more? Try this">
     <link rel="icon" type="image/x-icon" href="./img/Icon.png">
-    <link rel="stylesheet" href="./styles/css/clr_gradient.css">
+    <link rel="stylesheet" href="./styles/css/gradient.css">
 </head>
 
 <body>
     <form>
         <label for="color" class="color">
-            <span>Color</span>
+            <span>Color 1</span>
             <div class="container">
                 <input type="color" name="first" aria-label="color">
                 <input type="text" name="first" aria-label="hex" maxlength="7" placeholder="#000000">
             </div>
         </label>
         <label for="color" class="color">
-            <span>Color</span>
+            <span>Color 2</span>
             <div class="container">
                 <input type="color" name="second" aria-label="color">
                 <input type="text" name="second" aria-label="hex" maxlength="7" placeholder="#FFFFFF">
@@ -37,8 +37,8 @@
                 <option value="Radial">Radial</option>
             </select>
         </label>
-        <button type="button" class="generate">Random</button>
-        <button type="button" class="copy">Copy</button>
+        <button accesskey="1" type="button" class="generate">Random</button>
+        <button accesskey="2" type="button" class="copy">Copy</button>
     </form>
     <div class="gradient">
     </div>
