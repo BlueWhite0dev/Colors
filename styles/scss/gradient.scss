@@ -120,6 +120,9 @@ button {
   border-radius: 1.563rem;
 }
 @media (width <= 61.25rem) {
+  .return {
+    display: none;
+  }
   body {
     flex-direction: column;
     gap: 0.625em;

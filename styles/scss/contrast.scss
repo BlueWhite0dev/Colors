@@ -137,6 +137,9 @@ body {
   }
 }
 @media (width <= 60rem) {
+  .return {
+    display: none;
+  }
   .card {
     width: 100%;
     height: 100%;

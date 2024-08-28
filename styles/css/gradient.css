@@ -33,6 +33,21 @@ body {
   font-family: "Jakarta";
   src: url("../../fonts/PlusJakartaSans-Bold.ttf");
 }
+.return {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  transform: scale(1);
+  transition: transform 200ms ease-in-out;
+}
+.return:hover {
+  transform: scale(1.1);
+}
+.return img {
+  width: 50px;
+  aspect-ratio: 1/1;
+}
+
 * {
   color: #fafafa;
 }
@@ -163,6 +178,9 @@ button {
 }
 
 @media (width <= 61.25rem) {
+  .return {
+    display: none;
+  }
   body {
     flex-direction: column;
     gap: 0.625em;
