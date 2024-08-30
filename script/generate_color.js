@@ -2,6 +2,7 @@ generateColor();
 let isActive = false;
 document.querySelector(".generate").addEventListener("click", function () {
   if (isActive == false) {
+    new Notification(`Generated`).createObject();
     isActive = true;
     document.querySelector(".card").classList.add("animation");
     setTimeout(generateColor, 1000);
@@ -9,6 +10,7 @@ document.querySelector(".generate").addEventListener("click", function () {
 });
 document.addEventListener("keyup", function (event) {
   if (event.code === "Space" && isActive == false) {
+    new Notification(`Generated`).createObject();
     isActive = true;
     document.querySelector(".card").classList.add("animation");
     setTimeout(generateColor, 1000);
@@ -93,10 +95,11 @@ function copyToClipboard(number) {
   } else if (number == 5) {
     copyText = copyText.slice(6);
   }
+
   navigator.clipboard
     .writeText(copyText)
     .then(() => {
-      // alert("copied");
+      new Notification(`Copied: ${copyText}`).createObject();
     })
     .catch((err) => {
       console.error(err);

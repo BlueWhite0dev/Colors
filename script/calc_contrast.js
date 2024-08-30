@@ -20,6 +20,7 @@ document.addEventListener("keyup", function (event) {
 
     checkAccessibility(document.querySelectorAll(".bg")[0].innerHTML);
     showResult(document.querySelector("input[name='text_c']").value, document.querySelector("input[name='bg_c']").value);
+    new Notification(`Generated`).createObject();
   }
 });
 
@@ -153,6 +154,7 @@ function checkAccessibility(CR) {
           ? (function () {
               document.querySelectorAll(".card img")[i - 1].src = "./img/success.svg";
               accesibility[i].style.background = color[0];
+              new Notification(`Success`).createObject();
             })()
           : (function () {
               document.querySelectorAll(".card img")[i - 1].src = "./img/alarm.svg";

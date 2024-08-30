@@ -9,6 +9,7 @@ body {
   align-items: center;
   justify-content: center;
   gap: 1.25em;
+  overflow: hidden;
 }
 
 form {
@@ -120,7 +121,8 @@ button {
   border-radius: 1.563rem;
 }
 @media (width <= 61.25rem) {
-  .return {
+  .return,
+  .notification {
     display: none;
   }
   body {

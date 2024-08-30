@@ -25,6 +25,7 @@ document.querySelector(".generate").addEventListener("click", function () {
     document.querySelector("input[type='number']").value = Math.floor(Math.random() * 360);
   }
   showResult();
+  new Notification(`Generated`).createObject();
 });
 
 document.addEventListener("keyup", function (event) {
@@ -43,6 +44,7 @@ document.addEventListener("keyup", function (event) {
       document.querySelector("input[type='number']").value = Math.floor(Math.random() * 360);
     }
     showResult();
+    new Notification(`Generated`).createObject();
   }
 });
 
@@ -123,7 +125,7 @@ function copyToClipboard() {
   navigator.clipboard
     .writeText(copyText)
     .then(() => {
-      // alert("copied");
+      new Notification(`Copied`).createObject();
     })
     .catch((err) => {
       console.error(err);

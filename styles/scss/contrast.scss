@@ -137,7 +137,8 @@ body {
   }
 }
 @media (width <= 60rem) {
-  .return {
+  .return,
+  .notification {
     display: none;
   }
   .card {

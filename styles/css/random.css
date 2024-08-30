@@ -10,6 +10,29 @@ body {
   height: 100svh;
 }
 
+.notification {
+  background-color: #111315;
+  width: 20rem;
+  height: 3.75rem;
+  position: absolute;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  padding: 0.625em;
+  box-shadow: 0.5rem 0.5rem 1.5rem 0 rgb(17, 19, 21);
+  animation: notification_move 0.7s linear forwards, notification_opacity 1.9s cubic-bezier(0.88, 0.46, 1, 1) forwards;
+}
+.notification hr {
+  position: absolute;
+  bottom: 1.25rem;
+  left: 1.25rem;
+  animation: loading 1.65s cubic-bezier(0.88, 0.46, 1, 1) forwards;
+  border: #f0f8ff 0.063rem solid;
+}
+.notification span {
+  font-size: 1.4em !important;
+  color: #f0f8ff !important;
+}
+
 @keyframes marquee {
   from {
     transform: translateX(100%);
@@ -27,6 +50,30 @@ body {
   }
   100% {
     transform: translateY(0);
+  }
+}
+@keyframes notification_move {
+  0% {
+    transform: translateY(200%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+@keyframes notification_opacity {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: calc(100% - 20px);
   }
 }
 @font-face {
@@ -151,7 +198,8 @@ body {
   .card {
     width: 100%;
   }
-  .return {
+  .return,
+  .notification {
     display: none;
   }
 }/*# sourceMappingURL=random.css.map */
