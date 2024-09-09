@@ -190,6 +190,9 @@ select {
 select:hover {
   border: #6366f1 solid 0.063rem;
 }
+select option {
+  background-color: #25242a;
+}
 
 button {
   width: calc(100% - 1.25rem);

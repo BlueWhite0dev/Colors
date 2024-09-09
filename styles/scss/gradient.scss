@@ -89,6 +89,9 @@ select {
   &:hover {
     border: #6366f1 solid 0.063rem;
   }
+  option {
+    background-color: #25242a;
+  }
 }
 button {
   width: calc(100% - 0.625rem * 2);
